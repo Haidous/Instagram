@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--Featured View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FeaturedViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -94,24 +94,48 @@
                                     <constraint firstAttribute="width" constant="252" id="VLY-yH-S6Q"/>
                                 </constraints>
                                 <state key="normal" image="Sign in"/>
+                                <connections>
+                                    <segue destination="ypC-vU-QUL" kind="popoverPresentation" popoverAnchorView="GdO-Qh-uN3" id="pY1-ec-avP">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egg-gJ-8LV">
+                                <rect key="frame" x="40" y="612" width="181.5" height="21"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeN-M1-A27">
+                                <rect key="frame" x="227" y="606" width="92" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Create one!">
+                                    <color key="titleColor" red="0.99822753667831421" green="0.34151911735534668" blue="0.30269715189933777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rp0-JI-EyO" secondAttribute="bottom" id="3MH-Ad-or7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Egg-gJ-8LV" secondAttribute="bottom" constant="34" id="3jf-gL-A7g"/>
                             <constraint firstItem="OL3-2Z-gUI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5kh-As-nAi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="F1b-Cs-5WE" secondAttribute="trailing" constant="27" id="7A3-7u-R8D"/>
+                            <constraint firstItem="xeN-M1-A27" firstAttribute="top" secondItem="GdO-Qh-uN3" secondAttribute="bottom" constant="4" id="AWr-MM-bFA"/>
                             <constraint firstItem="OL3-2Z-gUI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="23" id="BXq-db-mp6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xeN-M1-A27" secondAttribute="trailing" constant="40" id="D6U-Ov-Tsl"/>
                             <constraint firstItem="6PU-dC-FQg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Hhr-0T-4UT"/>
+                            <constraint firstItem="Egg-gJ-8LV" firstAttribute="top" secondItem="GdO-Qh-uN3" secondAttribute="bottom" constant="10" id="Ipu-sI-pQj"/>
                             <constraint firstItem="GdO-Qh-uN3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MMd-3l-On6"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="F1b-Cs-5WE" secondAttribute="bottom" constant="271" id="NGH-a3-7Yt"/>
                             <constraint firstItem="rp0-JI-EyO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="STg-Gg-wxC"/>
                             <constraint firstItem="6PU-dC-FQg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T6U-3P-NvM"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GdO-Qh-uN3" secondAttribute="bottom" constant="65" id="ag3-s3-4Yz"/>
                             <constraint firstItem="F1b-Cs-5WE" firstAttribute="top" secondItem="OL3-2Z-gUI" secondAttribute="bottom" constant="193" id="bUw-Y3-TN7"/>
+                            <constraint firstItem="Egg-gJ-8LV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="bf6-54-1yr"/>
                             <constraint firstItem="rp0-JI-EyO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hx3-uN-6RW"/>
                             <constraint firstItem="F1b-Cs-5WE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="sFj-o4-IqN"/>
                             <constraint firstAttribute="trailing" secondItem="rp0-JI-EyO" secondAttribute="trailing" id="y3Z-y9-3Yv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xeN-M1-A27" secondAttribute="bottom" constant="25" id="yyk-mB-AXY"/>
                         </constraints>
                     </view>
                     <connections>
@@ -122,13 +146,113 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="0Q8-TP-G81">
+            <objects>
+                <viewController id="ypC-vU-QUL" customClass="LoginViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AHy-oK-HhP"/>
+                        <viewControllerLayoutGuide type="bottom" id="uaK-Az-bqQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KkG-XY-8zi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="9f2-PY-5kN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Welcome Back" translatesAutoresizingMaskIntoConstraints="NO" id="rqx-6z-i3C">
+                                <rect key="frame" x="33" y="60" width="308" height="89"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuP-0s-7yk">
+                                <rect key="frame" x="314" y="16" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="daD-8b-yx4"/>
+                                    <constraint firstAttribute="width" constant="45" id="lg6-Ah-34i"/>
+                                </constraints>
+                                <state key="normal" image="Cancel"/>
+                                <connections>
+                                    <action selector="cancelClicked:" destination="ypC-vU-QUL" eventType="touchUpInside" id="GUh-h4-Pct"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="johndoe@haidousm.com" textAlignment="natural" minimumFontSize="17" background="email textfield" translatesAutoresizingMaskIntoConstraints="NO" id="3WR-Yp-M3Z" customClass="RoundTextField" customModule="Instagram" customModuleProvider="target">
+                                <rect key="frame" x="61" y="273" width="252" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="252" id="5eO-aM-Yz0"/>
+                                    <constraint firstAttribute="height" constant="37" id="taK-xK-mS3"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" background="password textfield" translatesAutoresizingMaskIntoConstraints="NO" id="xdp-hZ-tIf" customClass="RoundTextField" customModule="Instagram" customModuleProvider="target">
+                                <rect key="frame" x="61" y="318" width="252" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="1CL-0Q-wXC"/>
+                                    <constraint firstAttribute="width" constant="252" id="8g5-pN-0h6"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aR-Te-S90">
+                                <rect key="frame" x="61" y="557" width="252" height="50"/>
+                                <state key="normal" image="Jump Back In"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9f2-PY-5kN" firstAttribute="top" secondItem="KkG-XY-8zi" secondAttribute="top" id="0AO-to-EDA"/>
+                            <constraint firstItem="xdp-hZ-tIf" firstAttribute="centerX" secondItem="KkG-XY-8zi" secondAttribute="centerX" id="1sU-aU-C0n"/>
+                            <constraint firstItem="3WR-Yp-M3Z" firstAttribute="top" secondItem="rqx-6z-i3C" secondAttribute="bottom" constant="124" id="8jw-Eq-otj"/>
+                            <constraint firstItem="rqx-6z-i3C" firstAttribute="leading" secondItem="KkG-XY-8zi" secondAttribute="leadingMargin" constant="17" id="Fgd-BC-0fx"/>
+                            <constraint firstItem="cuP-0s-7yk" firstAttribute="top" secondItem="KkG-XY-8zi" secondAttribute="top" constant="16" id="GwJ-Gw-zcl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rqx-6z-i3C" secondAttribute="trailing" constant="18" id="Nhj-m8-jQb"/>
+                            <constraint firstItem="3WR-Yp-M3Z" firstAttribute="centerX" secondItem="KkG-XY-8zi" secondAttribute="centerX" id="Ucp-VH-nJP"/>
+                            <constraint firstItem="uaK-Az-bqQ" firstAttribute="top" secondItem="1aR-Te-S90" secondAttribute="bottom" constant="60" id="VQW-3M-GAx"/>
+                            <constraint firstAttribute="trailing" secondItem="9f2-PY-5kN" secondAttribute="trailing" id="c4L-US-htU"/>
+                            <constraint firstItem="1aR-Te-S90" firstAttribute="leading" secondItem="KkG-XY-8zi" secondAttribute="leadingMargin" constant="45" id="f8N-Iw-c6o"/>
+                            <constraint firstItem="rqx-6z-i3C" firstAttribute="top" secondItem="AHy-oK-HhP" secondAttribute="bottom" constant="40" id="fGw-7T-JZD"/>
+                            <constraint firstAttribute="trailing" secondItem="cuP-0s-7yk" secondAttribute="trailing" constant="16" id="g9F-2x-ZM7"/>
+                            <constraint firstItem="xdp-hZ-tIf" firstAttribute="top" secondItem="3WR-Yp-M3Z" secondAttribute="bottom" constant="8" id="lOQ-sT-Cho"/>
+                            <constraint firstItem="uaK-Az-bqQ" firstAttribute="top" secondItem="9f2-PY-5kN" secondAttribute="bottom" id="qLO-Vb-ZSD"/>
+                            <constraint firstItem="9f2-PY-5kN" firstAttribute="leading" secondItem="KkG-XY-8zi" secondAttribute="leading" id="uLZ-Jv-DKP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1aR-Te-S90" secondAttribute="trailing" constant="46" id="vtF-wJ-kkW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YBS-uu-boD" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="876" y="138.98050974512745"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Background" width="375" height="667"/>
+        <image name="Cancel" width="45" height="45"/>
         <image name="Featured Tab" width="321" height="206"/>
+        <image name="Jump Back In" width="252" height="50"/>
         <image name="Line" width="1" height="22"/>
         <image name="Logo" width="300" height="80"/>
         <image name="Sign in" width="252" height="50"/>
+        <image name="Welcome Back" width="174" height="89"/>
+        <image name="email textfield" width="252" height="37"/>
+        <image name="password textfield" width="252" height="37"/>
         <image name="portrait" width="736" height="736"/>
     </resources>
 </document>

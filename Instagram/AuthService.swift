@@ -41,7 +41,6 @@ class AuthService{
 							
 								if user?.uid != nil{
 								
-									DataService.instance.saveUser(uid: user!.uid)
 									Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
 										
 										if error != nil{
@@ -50,7 +49,11 @@ class AuthService{
 											
 										}else{
 										
-											onComplete!(nil, user)
+											if let user = user{
+											
+												onComplete!(nil, user)
+											
+											}
 										
 										}
 										

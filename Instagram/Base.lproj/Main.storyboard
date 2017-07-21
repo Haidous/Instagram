@@ -24,6 +24,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="rp0-JI-EyO">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="OL3-2Z-gUI">
                                 <rect key="frame" x="38" y="43" width="300" height="80"/>
@@ -112,6 +113,11 @@
                                 <state key="normal" title="Create one!">
                                     <color key="titleColor" red="0.99822753667831421" green="0.34151911735534668" blue="0.30269715189933777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="ALw-ya-ATj" kind="popoverPresentation" popoverAnchorView="xeN-M1-A27" id="tjK-aV-8fn">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -145,6 +151,155 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="1eD-yS-ty2">
+            <objects>
+                <viewController id="ALw-ya-ATj" customClass="SignUpViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gHQ-DI-1g7"/>
+                        <viewControllerLayoutGuide type="bottom" id="TmN-7k-nkT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vvQ-sn-JTB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="fsJ-nu-CJZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNy-xG-88G">
+                                <rect key="frame" x="63" y="552" width="252" height="50"/>
+                                <state key="normal" image="Join INSTA"/>
+                                <connections>
+                                    <action selector="joinClicked:" destination="ALw-ya-ATj" eventType="touchUpInside" id="Zy2-eQ-zWn"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your username" textAlignment="natural" minimumFontSize="17" background="Username Textfield" translatesAutoresizingMaskIntoConstraints="NO" id="dbm-QU-CbT" customClass="RoundTextField" customModule="Instagram" customModuleProvider="target">
+                                <rect key="frame" x="63" y="345" width="252" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="johndoe@haidousm.com" textAlignment="natural" minimumFontSize="17" background="email textfield" translatesAutoresizingMaskIntoConstraints="NO" id="cnH-JB-agK" customClass="RoundTextField" customModule="Instagram" customModuleProvider="target">
+                                <rect key="frame" x="63" y="390" width="252" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" background="password textfield" translatesAutoresizingMaskIntoConstraints="NO" id="Gjp-OQ-c4T" customClass="RoundTextField" customModule="Instagram" customModuleProvider="target">
+                                <rect key="frame" x="63" y="435" width="252" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="join" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Welcome to the Fam" translatesAutoresizingMaskIntoConstraints="NO" id="nQT-0u-QVI">
+                                <rect key="frame" x="35" y="89" width="308" height="98"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="portrait" translatesAutoresizingMaskIntoConstraints="NO" id="gro-FZ-VPb" customClass="RoundImageView" customModule="Instagram" customModuleProvider="target">
+                                <rect key="frame" x="127" y="198" width="120" height="120"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="0AF-eU-ypd"/>
+                                    <constraint firstAttribute="height" constant="120" id="z5H-eb-FHQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="60"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="jV2-JD-RVG" appends="YES" id="7m6-fl-lhW"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ib-Xm-wai">
+                                <rect key="frame" x="314" y="16" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="NjO-rb-eSG"/>
+                                    <constraint firstAttribute="width" constant="45" id="gQI-Gt-snb"/>
+                                </constraints>
+                                <state key="normal" image="Cancel"/>
+                                <connections>
+                                    <action selector="cancelClicked:" destination="ALw-ya-ATj" eventType="touchUpInside" id="d4f-Pb-agI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="TmN-7k-nkT" firstAttribute="top" secondItem="fsJ-nu-CJZ" secondAttribute="bottom" id="4IO-Qm-6X2"/>
+                            <constraint firstItem="fsJ-nu-CJZ" firstAttribute="leading" secondItem="vvQ-sn-JTB" secondAttribute="leading" id="Bbf-yU-RXL"/>
+                            <constraint firstItem="gro-FZ-VPb" firstAttribute="top" secondItem="nQT-0u-QVI" secondAttribute="bottom" constant="11" id="FSf-3F-cUP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nQT-0u-QVI" secondAttribute="trailing" constant="16" id="MCQ-bo-Jo0"/>
+                            <constraint firstItem="1ib-Xm-wai" firstAttribute="top" secondItem="vvQ-sn-JTB" secondAttribute="top" constant="16" id="MMX-KD-BUV"/>
+                            <constraint firstItem="nQT-0u-QVI" firstAttribute="leading" secondItem="vvQ-sn-JTB" secondAttribute="leadingMargin" constant="19" id="OfT-z0-Scx"/>
+                            <constraint firstItem="vNy-xG-88G" firstAttribute="leading" secondItem="vvQ-sn-JTB" secondAttribute="leading" constant="63" id="PMn-Kv-Vjb"/>
+                            <constraint firstItem="fsJ-nu-CJZ" firstAttribute="top" secondItem="vvQ-sn-JTB" secondAttribute="top" id="Q5V-Dg-5gY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gro-FZ-VPb" secondAttribute="trailing" constant="112" id="ZVH-QD-ee7"/>
+                            <constraint firstAttribute="trailing" secondItem="fsJ-nu-CJZ" secondAttribute="trailing" id="Zfw-Kc-jml"/>
+                            <constraint firstAttribute="trailing" secondItem="1ib-Xm-wai" secondAttribute="trailing" constant="16" id="krC-6Y-ZNb"/>
+                            <constraint firstItem="TmN-7k-nkT" firstAttribute="top" secondItem="vNy-xG-88G" secondAttribute="bottom" constant="65" id="m20-W9-R0E"/>
+                            <constraint firstItem="nQT-0u-QVI" firstAttribute="top" secondItem="1ib-Xm-wai" secondAttribute="bottom" constant="28" id="nlG-iO-xqy"/>
+                            <constraint firstAttribute="trailing" secondItem="vNy-xG-88G" secondAttribute="trailing" constant="60" id="tsd-eM-DHh"/>
+                            <constraint firstItem="gro-FZ-VPb" firstAttribute="leading" secondItem="vvQ-sn-JTB" secondAttribute="leadingMargin" constant="111" id="ycR-5w-PYn"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="weq-yn-1rD" appends="YES" id="v5M-7N-UQg"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="cnH-JB-agK" id="Uwn-rU-WBa"/>
+                        <outlet property="passwordTextField" destination="Gjp-OQ-c4T" id="Vvc-51-3Rx"/>
+                        <outlet property="profileImageView" destination="gro-FZ-VPb" id="pac-Hu-MMt"/>
+                        <outlet property="usernameTextField" destination="dbm-QU-CbT" id="pTR-3w-OXP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A0O-po-Yxy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="weq-yn-1rD">
+                    <connections>
+                        <action selector="viewTapped:" destination="ALw-ya-ATj" id="NhT-TA-3JC"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="jV2-JD-RVG">
+                    <connections>
+                        <action selector="imageTapped:" destination="ALw-ya-ATj" id="6b6-fr-URg"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="137" y="879"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="0Q8-TP-G81">
@@ -183,7 +338,7 @@
                                 </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
                                         <real key="value" value="45"/>
@@ -201,7 +356,7 @@
                                 </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
                                         <real key="value" value="45"/>
@@ -212,11 +367,15 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aR-Te-S90">
-                                <rect key="frame" x="61" y="557" width="252" height="50"/>
+                                <rect key="frame" x="61" y="552" width="252" height="50"/>
                                 <state key="normal" image="Jump Back In"/>
+                                <connections>
+                                    <action selector="loginClicked:" destination="ypC-vU-QUL" eventType="touchUpInside" id="ErB-Bg-ZW3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="9f2-PY-5kN" firstAttribute="top" secondItem="KkG-XY-8zi" secondAttribute="top" id="0AO-to-EDA"/>
                             <constraint firstItem="xdp-hZ-tIf" firstAttribute="centerX" secondItem="KkG-XY-8zi" secondAttribute="centerX" id="1sU-aU-C0n"/>
@@ -225,7 +384,7 @@
                             <constraint firstItem="cuP-0s-7yk" firstAttribute="top" secondItem="KkG-XY-8zi" secondAttribute="top" constant="16" id="GwJ-Gw-zcl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rqx-6z-i3C" secondAttribute="trailing" constant="18" id="Nhj-m8-jQb"/>
                             <constraint firstItem="3WR-Yp-M3Z" firstAttribute="centerX" secondItem="KkG-XY-8zi" secondAttribute="centerX" id="Ucp-VH-nJP"/>
-                            <constraint firstItem="uaK-Az-bqQ" firstAttribute="top" secondItem="1aR-Te-S90" secondAttribute="bottom" constant="60" id="VQW-3M-GAx"/>
+                            <constraint firstItem="uaK-Az-bqQ" firstAttribute="top" secondItem="1aR-Te-S90" secondAttribute="bottom" constant="65" id="VQW-3M-GAx"/>
                             <constraint firstAttribute="trailing" secondItem="9f2-PY-5kN" secondAttribute="trailing" id="c4L-US-htU"/>
                             <constraint firstItem="1aR-Te-S90" firstAttribute="leading" secondItem="KkG-XY-8zi" secondAttribute="leadingMargin" constant="45" id="f8N-Iw-c6o"/>
                             <constraint firstItem="rqx-6z-i3C" firstAttribute="top" secondItem="AHy-oK-HhP" secondAttribute="bottom" constant="40" id="fGw-7T-JZD"/>
@@ -235,9 +394,21 @@
                             <constraint firstItem="9f2-PY-5kN" firstAttribute="leading" secondItem="KkG-XY-8zi" secondAttribute="leading" id="uLZ-Jv-DKP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1aR-Te-S90" secondAttribute="trailing" constant="46" id="vtF-wJ-kkW"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="cJF-yY-q7B" appends="YES" id="Yiz-eM-eS2"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="3WR-Yp-M3Z" id="Dxg-oZ-edm"/>
+                        <outlet property="passwordTextField" destination="xdp-hZ-tIf" id="d5q-aJ-Tx3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YBS-uu-boD" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cJF-yY-q7B">
+                    <connections>
+                        <action selector="viewTapped:" destination="ypC-vU-QUL" id="2gh-pO-3I3"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="876" y="138.98050974512745"/>
         </scene>
@@ -246,11 +417,14 @@
         <image name="Background" width="375" height="667"/>
         <image name="Cancel" width="45" height="45"/>
         <image name="Featured Tab" width="321" height="206"/>
+        <image name="Join INSTA" width="252" height="50"/>
         <image name="Jump Back In" width="252" height="50"/>
         <image name="Line" width="1" height="22"/>
         <image name="Logo" width="300" height="80"/>
         <image name="Sign in" width="252" height="50"/>
+        <image name="Username Textfield" width="252" height="37"/>
         <image name="Welcome Back" width="174" height="89"/>
+        <image name="Welcome to the Fam" width="222" height="98"/>
         <image name="email textfield" width="252" height="37"/>
         <image name="password textfield" width="252" height="37"/>
         <image name="portrait" width="736" height="736"/>

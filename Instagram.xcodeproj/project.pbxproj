@@ -21,6 +21,7 @@
 		B5D6EC6D1F1FD64F008705BE /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6EC6B1F1FD64F008705BE /* DataService.swift */; };
 		B5D6EC6F1F1FD717008705BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6EC6E1F1FD717008705BE /* User.swift */; };
 		B5D6EC711F1FDBCB008705BE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6EC701F1FDBCB008705BE /* LoginViewController.swift */; };
+		B5D6EC731F1FFEBA008705BE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6EC721F1FFEBA008705BE /* SignUpViewController.swift */; };
 		CC5C781BFADFACE167EC07CF /* Pods_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD81F5E9D4B92D71F89CD6E /* Pods_Instagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		B5D6EC6B1F1FD64F008705BE /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		B5D6EC6E1F1FD717008705BE /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B5D6EC701F1FDBCB008705BE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B5D6EC721F1FFEBA008705BE /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D8DD63D9B04DC77E8CD8A52D /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 			children = (
 				B56C9A851F1F9C1A00C479D9 /* FeaturedViewController.swift */,
 				B5D6EC701F1FDBCB008705BE /* LoginViewController.swift */,
+				B5D6EC721F1FFEBA008705BE /* SignUpViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5D6EC731F1FFEBA008705BE /* SignUpViewController.swift in Sources */,
 				B5D6EC661F1FD3A7008705BE /* RoundButton.swift in Sources */,
 				B533E6CB1F1FB95E00EE47E9 /* FeaturedCell.swift in Sources */,
 				B5D6EC671F1FD3A7008705BE /* RoundTextField.swift in Sources */,

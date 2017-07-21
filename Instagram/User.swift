@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct User{
+struct INSTAUser{
 
 	private var _username:String
 	private var _uid:String

@@ -6,7 +6,7 @@
 //  Copyright © 2017 Moussa Haidous. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import FirebaseDatabase
 import FirebaseStorage
 
@@ -40,7 +40,7 @@ class DataService{
 	
 	var imageStorageRef:StorageReference{
 	
-		return mainStorageRef.child("images")
+		return mainStorageRef.child("profile-pictures")
 	
 	}
 	
@@ -50,27 +50,33 @@ class DataService{
 	
 	}
 	
-	func saveUser(uid: String){
+	func saveUser(uid: String, username: String){
 	
-		let profile:Dictionary<String, Any> = ["username": ""]
+		let profile:Dictionary<String, Any> = ["username": username]
 		mainRef.child("users").child(uid).child("profile").setValue(profile)
 	
 	}
 	
-	func sendMedia(senderUID: String, sendingTo: Dictionary<String, User>, mediaURL: URL, textSnippet: String? = nil){
+	func uploadPicture(imageView: UIImageView, uid: String){
+	
+		if let image = imageView.image{
 		
-		var recipients = [String]()
+			let data = UIImagePNGRepresentation(image)!
+			
+			let randomID = UUID().uuidString
 		
-		for key in sendingTo.keys{
-		
-			recipients.append(key)
+			imageStorageRef.child(randomID).putData(data, metadata: nil) { (metadata, error) in
+			guard let metadata = metadata else {
+			
+			return
+			}
+			
+				let downloadURL = metadata.downloadURL()?.absoluteString
+				self.mainRef.child("users").child(uid).child("profile").child("profilePicture").setValue(downloadURL)
+				
+			}
 			
 		}
 	
-		let	sentMedia: Dictionary<String, Any> = ["mediaURL":mediaURL.absoluteString, "userID": senderUID, "openCount":0, "recipients":recipients]
-		mainRef.child("sentMessages").childByAutoId().setValue(sentMedia)
-		
-	
 	}
-
 }

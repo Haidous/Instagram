@@ -45,6 +45,8 @@ class SignUpViewController: UIViewController {
 				DataService.instance.saveUser(uid: user.uid, username: self.usernameTextField.text!);
 				DataService.instance.uploadPicture(imageView: self.profileImageView, uid: userID)
 				
+				self.performSegue(withIdentifier: "toFeed2", sender: nil)
+				
 			})
 
 		

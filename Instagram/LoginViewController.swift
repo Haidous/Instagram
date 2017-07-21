@@ -7,16 +7,19 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
+	
+	
 
 	@IBOutlet var emailTextField: RoundTextField!
 	@IBOutlet var passwordTextField: RoundTextField!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+		// Do any additional setup after loading the view.
+		
     }
 	
 	
@@ -27,6 +30,7 @@ class LoginViewController: UIViewController {
 			AuthService.instance.signin(email: emailTextField.text!, password: passwordTextField.text!, onComplete: {(error, data) in
 			
 				print("HAIDOUS: Success!")
+				self.performSegue(withIdentifier: "toFeed1", sender: nil)
 			
 			})
 		

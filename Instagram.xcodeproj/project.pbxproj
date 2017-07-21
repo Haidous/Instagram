@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		B533E6C91F1F9E5400EE47E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B533E6C81F1F9E5400EE47E9 /* GoogleService-Info.plist */; };
 		B533E6CB1F1FB95E00EE47E9 /* FeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B533E6CA1F1FB95E00EE47E9 /* FeaturedCell.swift */; };
+		B544BC551F226AF3007F5BB6 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544BC541F226AF3007F5BB6 /* PostCell.swift */; };
 		B56C9A841F1F9C1A00C479D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56C9A831F1F9C1A00C479D9 /* AppDelegate.swift */; };
 		B56C9A861F1F9C1A00C479D9 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56C9A851F1F9C1A00C479D9 /* FeaturedViewController.swift */; };
 		B56C9A891F1F9C1A00C479D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B56C9A871F1F9C1A00C479D9 /* Main.storyboard */; };
 		B56C9A8B1F1F9C1A00C479D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B56C9A8A1F1F9C1A00C479D9 /* Assets.xcassets */; };
 		B56C9A8E1F1F9C1A00C479D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B56C9A8C1F1F9C1A00C479D9 /* LaunchScreen.storyboard */; };
+		B592D1B01F224AD1006DF80E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592D1AF1F224AD1006DF80E /* FeedViewController.swift */; };
 		B5D6EC661F1FD3A7008705BE /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6EC641F1FD3A7008705BE /* RoundButton.swift */; };
 		B5D6EC671F1FD3A7008705BE /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6EC651F1FD3A7008705BE /* RoundTextField.swift */; };
 		B5D6EC691F1FD3C0008705BE /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6EC681F1FD3C0008705BE /* RoundImageView.swift */; };
@@ -30,6 +32,7 @@
 		AFD81F5E9D4B92D71F89CD6E /* Pods_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B533E6C81F1F9E5400EE47E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B533E6CA1F1FB95E00EE47E9 /* FeaturedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedCell.swift; sourceTree = "<group>"; };
+		B544BC541F226AF3007F5BB6 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		B56C9A801F1F9C1A00C479D9 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56C9A831F1F9C1A00C479D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B56C9A851F1F9C1A00C479D9 /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +40,7 @@
 		B56C9A8A1F1F9C1A00C479D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B56C9A8D1F1F9C1A00C479D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B56C9A8F1F1F9C1A00C479D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B592D1AF1F224AD1006DF80E /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		B5D6EC641F1FD3A7008705BE /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		B5D6EC651F1FD3A7008705BE /* RoundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
 		B5D6EC681F1FD3C0008705BE /* RoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
@@ -65,8 +69,9 @@
 			children = (
 				B5D6EC641F1FD3A7008705BE /* RoundButton.swift */,
 				B5D6EC651F1FD3A7008705BE /* RoundTextField.swift */,
-				B533E6CA1F1FB95E00EE47E9 /* FeaturedCell.swift */,
 				B5D6EC681F1FD3C0008705BE /* RoundImageView.swift */,
+				B533E6CA1F1FB95E00EE47E9 /* FeaturedCell.swift */,
+				B544BC541F226AF3007F5BB6 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -85,6 +90,7 @@
 				B56C9A851F1F9C1A00C479D9 /* FeaturedViewController.swift */,
 				B5D6EC701F1FDBCB008705BE /* LoginViewController.swift */,
 				B5D6EC721F1FFEBA008705BE /* SignUpViewController.swift */,
+				B592D1AF1F224AD1006DF80E /* FeedViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -285,6 +291,7 @@
 			files = (
 				B5D6EC731F1FFEBA008705BE /* SignUpViewController.swift in Sources */,
 				B5D6EC661F1FD3A7008705BE /* RoundButton.swift in Sources */,
+				B544BC551F226AF3007F5BB6 /* PostCell.swift in Sources */,
 				B533E6CB1F1FB95E00EE47E9 /* FeaturedCell.swift in Sources */,
 				B5D6EC671F1FD3A7008705BE /* RoundTextField.swift in Sources */,
 				B56C9A861F1F9C1A00C479D9 /* FeaturedViewController.swift in Sources */,
@@ -293,6 +300,7 @@
 				B5D6EC691F1FD3C0008705BE /* RoundImageView.swift in Sources */,
 				B5D6EC6C1F1FD64F008705BE /* AuthService.swift in Sources */,
 				B5D6EC711F1FDBCB008705BE /* LoginViewController.swift in Sources */,
+				B592D1B01F224AD1006DF80E /* FeedViewController.swift in Sources */,
 				B5D6EC6D1F1FD64F008705BE /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

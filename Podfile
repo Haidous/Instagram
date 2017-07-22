@@ -10,5 +10,5 @@ target 'Instagram' do
 	pod ‘Firebase/Database’
 	pod ‘Firebase/Storage’
 	pod ‘Firebase/Auth’
-
+	pod 'Kingfisher', '~> 3.0'
 end

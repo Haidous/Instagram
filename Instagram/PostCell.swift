@@ -13,6 +13,7 @@ class PostCell: UITableViewCell {
 	@IBOutlet var usernameLabel: UILabel!
 	@IBOutlet var postImageView: UIImageView!
 	@IBOutlet var profileImageView: RoundImageView!
+	@IBOutlet var timeLabel: UILabel!
 	
 
     override func awakeFromNib() {

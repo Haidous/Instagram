@@ -8,27 +8,37 @@
 
 import Foundation
 
-struct INSTAUser{
+struct _User{
 
-	private var _username:String
 	private var _uid:String
 	
-	var uid: String{
+	private var _username:String
+	private var _profileImageURL:String
+	
+	var uid:String{
 	
 		return _uid
 	
 	}
 	
-	var username: String{
+	var username:String{
 	
 		return _username
 		
 	}
 	
-	init(uid: String, username:String){
+	var profileImageURL:String{
+	
+		return _profileImageURL
+	
+	}
+	
+	init(uid:String, username:String, profileImageURL:String){
 	
 		_uid = uid
+		
 		_username = username
+		_profileImageURL = profileImageURL
 	
 	}
 

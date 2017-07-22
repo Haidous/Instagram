@@ -14,6 +14,8 @@ class DataService{
 
 	private static let _instance = DataService()
 	
+	var users = [_User]()
+	
 	static var instance:DataService{
 	
 		return _instance
@@ -32,15 +34,27 @@ class DataService{
 		
 	}
 	
+	var postsRef:DatabaseReference{
+	
+		return mainRef.child("posts")
+	
+	}
+	
 	var mainStorageRef:StorageReference{
 	
 		return Storage.storage().reference()
 		
 	}
 	
-	var imageStorageRef:StorageReference{
+	var profileImagesStorageRef:StorageReference{
 	
 		return mainStorageRef.child("profile-pictures")
+	
+	}
+	
+	var postsImagesStorageRef:StorageReference{
+	
+		return mainStorageRef.child("posts-pictures")
 	
 	}
 	
@@ -56,6 +70,77 @@ class DataService{
 		mainRef.child("users").child(uid).child("profile").setValue(profile)
 	
 	}
+
+	func downloadPosts(onComplete: Completion?){
+	
+		var posts = [Post]()
+		
+		postsRef.observe(.value, with: { (snapshot) in
+			
+			let firstDict = snapshot.value! as? [String: Any]
+			let idArray = Array(firstDict!.keys)
+			let postsArray = Array(firstDict!.values)
+			
+			for (_post, _id) in zip(postsArray, idArray){
+			
+				let post = _post as! [String: Any]
+				let id = _id 
+				
+				let caption = post["caption"] as! String
+				let likes = post["likes"] as! String
+				let postImageURL = post["postImage"] as! String
+				let time = post["timeStamp"] as! String
+				
+				let actualPost = Post(uid: id, caption: caption, imageURL: postImageURL, likes: likes, time: time)
+				
+				posts.append(actualPost)
+				
+			
+			}
+			
+			onComplete!(nil, posts)
+			
+		})
+
+	}
+	
+	func downloadProfile(postID: String, onComplete: Completion?){
+		
+		usersRef.observe(.value, with: { (snapshot) in
+			
+			let firstDict = snapshot.value! as? [String: Any]
+			let idArray = Array(firstDict!.keys)
+			let usersArray = Array(firstDict!.values)
+			
+			for (_user, _id) in zip(usersArray, idArray){
+				
+				let user = _user as! [String: Any]
+				let id = _id
+				
+				for _postID in Array((user["posts"] as! [String:Any]).keys){
+				
+					if _postID == postID{
+						
+						let userProfile = user["profile"] as! [String:Any]
+						
+						let username = userProfile["username"] as! String
+						let profileImageURL = userProfile["profilePicture"] as! String
+					
+						let actualUser = _User(uid: id, username: username, profileImageURL: profileImageURL)
+						
+						self.users.append(actualUser)
+						onComplete!(nil, self.users)
+
+					
+					}
+				
+				}
+	
+			}
+			
+		})
+	
+	}
 	
 	func uploadPicture(imageView: UIImageView, uid: String){
 	
@@ -65,7 +150,7 @@ class DataService{
 			
 			let randomID = UUID().uuidString
 		
-			imageStorageRef.child(randomID).putData(data, metadata: nil) { (metadata, error) in
+			profileImagesStorageRef.child(randomID).putData(data, metadata: nil) { (metadata, error) in
 			guard let metadata = metadata else {
 			
 			return

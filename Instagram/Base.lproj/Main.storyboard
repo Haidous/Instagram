@@ -51,22 +51,28 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="365"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="portrait" translatesAutoresizingMaskIntoConstraints="NO" id="ZtX-At-AcD">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="portrait" translatesAutoresizingMaskIntoConstraints="NO" id="ZtX-At-AcD">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="365"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Header thing" translatesAutoresizingMaskIntoConstraints="NO" id="c7c-Lh-9jb">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Header thing" translatesAutoresizingMaskIntoConstraints="NO" id="c7c-Lh-9jb">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="100" id="p1t-Rb-IG1"/>
-                                                    </constraints>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="portrait" translatesAutoresizingMaskIntoConstraints="NO" id="rRQ-gZ-Wvh" customClass="RoundImageView" customModule="Instagram" customModuleProvider="target">
-                                                    <rect key="frame" x="165" y="38" width="45" height="45"/>
-                                                    <gestureRecognizers/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="59 mins" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7D-TA-jWc">
+                                                    <rect key="frame" x="320" y="48" width="55" height="25"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="45" id="0kf-Ex-RdS"/>
-                                                        <constraint firstAttribute="width" constant="45" id="bo4-kh-zrc"/>
+                                                        <constraint firstAttribute="height" constant="25" id="Ydh-Ba-VUh"/>
+                                                        <constraint firstAttribute="width" constant="55" id="qg8-gF-4sb"/>
                                                     </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="portrait" translatesAutoresizingMaskIntoConstraints="NO" id="rRQ-gZ-Wvh" customClass="RoundImageView" customModule="Instagram" customModuleProvider="target">
+                                                    <rect key="frame" x="165" y="38" width="45" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <gestureRecognizers/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="22.5"/>
@@ -82,68 +88,49 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rosa Hammond" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sm-IR-owL">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rosa Hammond" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sm-IR-owL">
                                                     <rect key="frame" x="120" y="8" width="134" height="25"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="Ra9-XJ-yEl"/>
-                                                    </constraints>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User round 2" translatesAutoresizingMaskIntoConstraints="NO" id="JOb-Z4-GN6">
-                                                    <rect key="frame" x="105" y="13" width="15" height="15"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="15" id="2Ny-iL-Kkr"/>
-                                                        <constraint firstAttribute="height" constant="15" id="zt4-Jb-E6S"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4T-a9-HDB">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4T-a9-HDB">
                                                     <rect key="frame" x="184" y="323" width="191" height="48"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="48" id="aEo-Xz-sip"/>
-                                                    </constraints>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="Comment Button"/>
                                                     <connections>
                                                         <action selector="commentClicked:" destination="Pgc-R1-3qZ" eventType="touchUpInside" id="2ZB-hp-gZD"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05K-M5-ahA">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05K-M5-ahA">
                                                     <rect key="frame" x="0.0" y="323" width="192" height="48"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="48" id="CwC-n2-Phv"/>
-                                                    </constraints>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="Like Button"/>
                                                     <connections>
                                                         <action selector="likeClicked:" destination="Pgc-R1-3qZ" eventType="touchUpInside" id="ZWc-AN-Msu"/>
                                                     </connections>
                                                 </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fill 167" translatesAutoresizingMaskIntoConstraints="NO" id="ODF-Ds-bof">
+                                                    <rect key="frame" x="301" y="45" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="7T3-50-ux4"/>
+                                                        <constraint firstAttribute="width" constant="20" id="VqC-yO-m7k"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="A4T-a9-HDB" secondAttribute="bottom" constant="-6" id="0fq-2d-MKB"/>
-                                                <constraint firstItem="5sm-IR-owL" firstAttribute="leading" secondItem="JOb-Z4-GN6" secondAttribute="trailing" id="94D-Fo-S6a"/>
-                                                <constraint firstItem="ZtX-At-AcD" firstAttribute="leading" secondItem="TXg-KW-iOU" secondAttribute="leading" id="DYh-oh-Qdz"/>
-                                                <constraint firstAttribute="bottom" secondItem="ZtX-At-AcD" secondAttribute="bottom" id="Ih8-xq-w9s"/>
-                                                <constraint firstAttribute="trailing" secondItem="c7c-Lh-9jb" secondAttribute="trailing" id="MWq-6R-y6O"/>
-                                                <constraint firstItem="rRQ-gZ-Wvh" firstAttribute="centerX" secondItem="TXg-KW-iOU" secondAttribute="centerX" id="OUL-AU-sZn"/>
-                                                <constraint firstItem="c7c-Lh-9jb" firstAttribute="top" secondItem="TXg-KW-iOU" secondAttribute="top" id="OZ6-qh-axE"/>
-                                                <constraint firstItem="rRQ-gZ-Wvh" firstAttribute="top" secondItem="TXg-KW-iOU" secondAttribute="topMargin" constant="30" id="Wp0-3c-GNB"/>
-                                                <constraint firstItem="c7c-Lh-9jb" firstAttribute="leading" secondItem="TXg-KW-iOU" secondAttribute="leading" id="XTr-at-vIf"/>
-                                                <constraint firstAttribute="trailing" secondItem="ZtX-At-AcD" secondAttribute="trailing" id="YmN-LC-e4U"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="5sm-IR-owL" secondAttribute="trailing" constant="113" id="aGS-Uf-v22"/>
-                                                <constraint firstItem="05K-M5-ahA" firstAttribute="leading" secondItem="TXg-KW-iOU" secondAttribute="leading" id="eGn-cW-emX"/>
-                                                <constraint firstAttribute="trailing" secondItem="A4T-a9-HDB" secondAttribute="trailing" id="gHy-jd-nsX"/>
-                                                <constraint firstItem="5sm-IR-owL" firstAttribute="top" secondItem="TXg-KW-iOU" secondAttribute="topMargin" id="lW3-cB-Rv4"/>
-                                                <constraint firstAttribute="bottom" secondItem="05K-M5-ahA" secondAttribute="bottom" constant="-6" id="lhf-O3-bKY"/>
-                                                <constraint firstItem="ZtX-At-AcD" firstAttribute="top" secondItem="TXg-KW-iOU" secondAttribute="top" id="rld-Gx-hhC"/>
-                                                <constraint firstItem="JOb-Z4-GN6" firstAttribute="top" secondItem="TXg-KW-iOU" secondAttribute="top" constant="13" id="x5Z-no-5DL"/>
-                                                <constraint firstItem="5sm-IR-owL" firstAttribute="leading" secondItem="TXg-KW-iOU" secondAttribute="leadingMargin" constant="112" id="yfs-IV-7tV"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ODF-Ds-bof" secondAttribute="trailing" constant="46" id="LZK-E6-Ls9"/>
+                                                <constraint firstItem="ODF-Ds-bof" firstAttribute="top" secondItem="TXg-KW-iOU" secondAttribute="topMargin" constant="37" id="NCr-wX-lgh"/>
+                                                <constraint firstItem="o7D-TA-jWc" firstAttribute="top" secondItem="TXg-KW-iOU" secondAttribute="top" constant="48" id="Uli-AF-BrB"/>
+                                                <constraint firstAttribute="trailing" secondItem="o7D-TA-jWc" secondAttribute="trailing" id="VZA-0l-96s"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="postImageView" destination="ZtX-At-AcD" id="mML-b6-O1z"/>
                                             <outlet property="profileImageView" destination="rRQ-gZ-Wvh" id="QvJ-wR-ud3"/>
+                                            <outlet property="timeLabel" destination="o7D-TA-jWc" id="L2q-Xb-vpm"/>
                                             <outlet property="usernameLabel" destination="5sm-IR-owL" id="OAM-DF-w1P"/>
                                         </connections>
                                     </tableViewCell>
@@ -661,6 +648,7 @@
         <image name="Cancel" width="45" height="45"/>
         <image name="Comment Button" width="191" height="48"/>
         <image name="Featured Tab" width="321" height="206"/>
+        <image name="Fill 167" width="18" height="18"/>
         <image name="Header thing" width="375" height="100"/>
         <image name="Home" width="37" height="34"/>
         <image name="Join INSTA" width="252" height="50"/>
@@ -672,7 +660,6 @@
         <image name="Search" width="42" height="34"/>
         <image name="Settings" width="52" height="36"/>
         <image name="Sign in" width="252" height="50"/>
-        <image name="User round 2" width="23" height="23"/>
         <image name="Username Textfield" width="252" height="37"/>
         <image name="Welcome Back" width="174" height="89"/>
         <image name="Welcome to the Fam" width="222" height="98"/>

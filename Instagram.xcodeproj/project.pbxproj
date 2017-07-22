@@ -10,6 +10,7 @@
 		B533E6C91F1F9E5400EE47E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B533E6C81F1F9E5400EE47E9 /* GoogleService-Info.plist */; };
 		B533E6CB1F1FB95E00EE47E9 /* FeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B533E6CA1F1FB95E00EE47E9 /* FeaturedCell.swift */; };
 		B544BC551F226AF3007F5BB6 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544BC541F226AF3007F5BB6 /* PostCell.swift */; };
+		B544BC571F2277E0007F5BB6 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544BC561F2277E0007F5BB6 /* Post.swift */; };
 		B56C9A841F1F9C1A00C479D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56C9A831F1F9C1A00C479D9 /* AppDelegate.swift */; };
 		B56C9A861F1F9C1A00C479D9 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56C9A851F1F9C1A00C479D9 /* FeaturedViewController.swift */; };
 		B56C9A891F1F9C1A00C479D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B56C9A871F1F9C1A00C479D9 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		B533E6C81F1F9E5400EE47E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B533E6CA1F1FB95E00EE47E9 /* FeaturedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedCell.swift; sourceTree = "<group>"; };
 		B544BC541F226AF3007F5BB6 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		B544BC561F2277E0007F5BB6 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B56C9A801F1F9C1A00C479D9 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56C9A831F1F9C1A00C479D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B56C9A851F1F9C1A00C479D9 /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				B5D6EC6E1F1FD717008705BE /* User.swift */,
+				B544BC561F2277E0007F5BB6 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				B544BC551F226AF3007F5BB6 /* PostCell.swift in Sources */,
 				B533E6CB1F1FB95E00EE47E9 /* FeaturedCell.swift in Sources */,
 				B5D6EC671F1FD3A7008705BE /* RoundTextField.swift in Sources */,
+				B544BC571F2277E0007F5BB6 /* Post.swift in Sources */,
 				B56C9A861F1F9C1A00C479D9 /* FeaturedViewController.swift in Sources */,
 				B56C9A841F1F9C1A00C479D9 /* AppDelegate.swift in Sources */,
 				B5D6EC6F1F1FD717008705BE /* User.swift in Sources */,

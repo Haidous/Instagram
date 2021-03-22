@@ -1,2 +1,2 @@
-# Instagram
-## An Instagram clone.. but much better.
+# NotInstagram
+## an Instagram clone built with Swift & Firebase
